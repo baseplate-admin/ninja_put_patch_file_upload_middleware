@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "ninja-put-patch-file-upload-middleware"
+version = "0.1.1"
+description = "A middleware that allows user to upload files using PUT / Patch"
+authors = ["baseplate-admin <61817579+baseplate-admin@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "ninja_put_patch_file_upload_middleware"}]
+homepage = "https://github.com/baseplate-admin/ninja_put_patch_file_upload_middleware"
+repository = "https://github.com/baseplate-admin/ninja_put_patch_file_upload_middleware"
+keywords = ["ninja", "django-ninja", "middlewares",'put','patch','file upload']
+classifiers = [
+      "Development Status :: 5 - Production/Stable",
+      "Intended Audience :: Developers",
+      "Topic :: Internet :: WWW/HTTP :: WSGI :: Middleware",
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.7"
+asgiref = "^3.6"
+django = ">=3.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
