@@ -32,4 +32,4 @@ This package is licensed under the MIT License ( same as `django-ninja` ). See t
 
 ## Feature Complete
 
-I am not willing to add any more functionality to this module. This should work as is. Unless there are changes in `django`/`asgiref` side. Please dont open ask for changes >_<
+I am not willing to add any more functionality to this module. This should work as is. Unless there are changes in `django`/`asgiref` side. Please dont ask for changes >_<
