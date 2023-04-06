@@ -1,5 +1,5 @@
 # ninja_put_patch_file_upload_middleware
-This middleware allows users to upload files using the HTTP PUT or PATCH method. Backports the functionality from [django-ninja#719](https://github.com/vitalik/django-ninja/pull/719) which in turn is based on  [django-ninja#417 (comment)](https://github.com/vitalik/django-ninja/issues/417#issuecomment-1092545699) which should be available in django-ninja if [django-ninja#397](https://github.com/vitalik/django-ninja/pull/397) is merged ( in which this middleware works as a backport )
+This middleware allows users to upload files using the HTTP PUT or PATCH method. Backports the functionality from [django-ninja#719](https://github.com/vitalik/django-ninja/pull/719) which in turn is based on  [django-ninja#417 (comment)](https://github.com/vitalik/django-ninja/issues/417#issuecomment-1092545699) which should be available in django-ninja if [django-ninja#397](https://github.com/vitalik/django-ninja/pull/397) is merged ( in that case this middleware works as a backport )
 
 ## Requirements
 
