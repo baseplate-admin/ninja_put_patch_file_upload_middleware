@@ -76,7 +76,7 @@ from unittest import mock
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.test import RequestFactory, TestCase, override_settings
 
-from middlewares import process_put_patch
+from ninja_put_patch_file_upload_middleware.middlewares import process_put_patch
 
 
 @override_settings(ROOT_URLCONF="middleware.urls")
