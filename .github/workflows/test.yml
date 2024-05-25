@@ -34,6 +34,6 @@ jobs:
             - name: Install core
               run: pip install --pre "Django${{ matrix.django-version }}" "pydantic<3"
             - name: Install tests
-              run: pip install pytest pytest-asyncio pytest-django psycopg2-binary
+              run: pip install pytest pytest-asyncio pytest-django psycopg django-ninja
             - name: Test
               run: pytest .
