@@ -16,8 +16,8 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.8"
-asgiref = "^3.6"
+python = ">=3.8"
+asgiref = ">=3.6"
 django = ">=3.2"
 django-ninja = "*"
 
