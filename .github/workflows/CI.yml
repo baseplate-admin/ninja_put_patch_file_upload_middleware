@@ -26,25 +26,11 @@ jobs:
               with:
                   virtualenvs-create: true
                   virtualenvs-in-project: true
-            - name: Determine Django compatibility
-              id: check-django
-              run: |
-                  if [[ "${{ matrix.python-version }}" == "3.8" && "${{ matrix.django-version }}" > "4.1" ]]; then
-                    echo "compatible=false" >> $GITHUB_OUTPUT
-                  elif [[ "${{ matrix.python-version }}" == "3.9" && "${{ matrix.django-version }}" > "4.2" ]]; then
-                    echo "compatible=false" >> $GITHUB_OUTPUT
-                  elif [[ "${{ matrix.python-version }}" < "3.10" && "${{ matrix.django-version }}" == "5.0" ]]; then
-                    echo "compatible=false" >> $GITHUB_OUTPUT
-                  else
-                    echo "compatible=true" >> $GITHUB_OUTPUT
-                  fi
             - name: Install dependencies
-              if: steps.check-django.outputs.compatible == 'true'
               run: |
                   poetry install --sync --no-interaction --no-root
                   poetry run pip install "django==${{ matrix.django-version }}.*"
             - name: Run tests
-              if: steps.check-django.outputs.compatible == 'true'
               run: poetry run pytest .
     merge:
         runs-on: ubuntu-latest
