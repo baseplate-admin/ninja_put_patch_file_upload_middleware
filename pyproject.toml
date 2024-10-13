@@ -10,16 +10,16 @@ homepage = "https://github.com/baseplate-admin/ninja_put_patch_file_upload_middl
 repository = "https://github.com/baseplate-admin/ninja_put_patch_file_upload_middleware"
 keywords = ["ninja", "django-ninja", "middlewares",'put','patch','file upload']
 classifiers = [
-      "Development Status :: 5 - Production/Stable",
-      "Intended Audience :: Developers",
-      "Topic :: Internet :: WWW/HTTP :: WSGI :: Middleware",
-          "Framework :: Django",
-          "Framework :: Django :: 3.2",
-          "Framework :: Django :: 4.1",
-          "Framework :: Django :: 4.2",
-          "Framework :: Django :: 5.0",
-          "Framework :: Django :: 5.1",
-          "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Internet :: WWW/HTTP :: WSGI :: Middleware",
+    "Framework :: Django",
+    "Framework :: Django :: 3.2",
+    "Framework :: Django :: 4.1",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.0",
+    "Framework :: Django :: 5.1",
+    "Operating System :: OS Independent",
 ]
 
 [tool.poetry.dependencies]
@@ -29,9 +29,9 @@ django-ninja = "*"
 
 
 [tool.poetry.group.dev.dependencies]
-pytest = ">=7.2.2,<9.0.0"
-pytest-django = "^4.8.0"
-pytest-asyncio = ">=0.23.6,<0.25.0"
+pytest = ">=7.2.2"
+pytest-django = ">=4.8.0"
+pytest-asyncio = ">=0.23.6"
 
 [build-system]
 requires = ["poetry-core"]
