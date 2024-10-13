@@ -28,6 +28,8 @@ jobs:
                     # Python 3.13
                     - python-version: '3.13'
                       django-version: '3.2'
+                    - python-version: '3.13'
+                      django-version: '4.0'
 
         steps:
             - uses: actions/checkout@v3
