@@ -1,18 +1,9 @@
-import sys
+from collections.abc import Callable
+from typing import Any, Union
+
 from asgiref.sync import iscoroutinefunction, sync_to_async
 from django.http import HttpRequest, HttpResponse
 from django.utils.decorators import sync_and_async_middleware
-from typing import Any
-
-if sys.version_info >= (3, 9):
-    from collections.abc import Callable
-else:
-    from typing import Callable
-
-if sys.version_info >= (3, 10):
-    from typing import Union
-else:
-    from typing_extensions import Union
 
 
 @sync_and_async_middleware
