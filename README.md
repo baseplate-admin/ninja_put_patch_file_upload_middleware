@@ -7,7 +7,7 @@ This middleware allows users to upload files using the HTTP PUT or PATCH method.
 
 * Django 3.2+ 
 * Asgiref 3.6.0+
-* Python 3.7+
+* Python 3.9+
 
 ## Installation
 
