@@ -34,9 +34,6 @@ jobs:
 
             - name: Install python dependencies
               run: poetry install --sync --no-interaction --no-root
-            
-            - name: Install django
-              run: poetry add "django@${{ matrix.django-version }}"
 
             - name: Test
               run: poetry run pytest .
