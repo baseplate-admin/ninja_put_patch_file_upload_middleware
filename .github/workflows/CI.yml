@@ -18,12 +18,10 @@ jobs:
                 django-version: ['3.2', '4.0', '4.1', '4.2', '5.0', '5.1']
             fail-fast: false
             exclude:
-                # Python 3.8
                 - python-version: '3.8'
                   django-version: '5.0'
                 - python-version: '3.8'
                   django-version: '5.1'
-                # Python 3.9
                 - python-version: '3.9'
                   django-version: '5.0'
                 - python-version: '3.9'
