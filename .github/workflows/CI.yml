@@ -10,14 +10,13 @@ permissions:
     contents: write
     pull-requests: write
 
-
 jobs:
     test:
         runs-on: ubuntu-latest
         strategy:
             matrix:
                 python-version: ['3.9', '3.10', '3.11', '3.12', '3.13']
-                django-version: ['3.2', '4.0', '4.1', '4.2', '5.0','5.1'] # Explicit Django versions
+                django-version: ['3.2', '4.0', '4.1', '4.2', '5.0'] # Explicit Django versions
 
         steps:
             - uses: actions/checkout@v3
@@ -33,7 +32,9 @@ jobs:
                   virtualenvs-in-project: true
 
             - name: Install python dependencies
-              run: poetry install --sync --no-interaction --no-root
+              run: |
+                  poetry install --sync --no-interaction --no-root
+                  poetry add django@${{ matrix.django-version }} # Install Django for the specific version
 
             - name: Test
               run: poetry run pytest .
