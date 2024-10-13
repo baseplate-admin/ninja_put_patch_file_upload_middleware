@@ -1,14 +1,18 @@
 from collections.abc import Callable
-from typing import Any
+from typing import Any, Union
 
 from asgiref.sync import iscoroutinefunction, sync_to_async
-from django.http import HttpRequest
+from django.http import HttpRequest, HttpResponse
 from django.utils.decorators import sync_and_async_middleware
 
 
 @sync_and_async_middleware
-def process_put_patch(get_response: Callable) -> Callable:
-    async def async_middleware(request: HttpRequest) -> Any:
+def process_put_patch(
+    get_response: Union[
+        Callable[[HttpRequest], HttpResponse], Callable[[HttpRequest], Any]
+    ],
+) -> Union[Callable[[HttpRequest], Any], Callable[[HttpRequest], HttpResponse]]:
+    async def async_middleware(request: HttpRequest) -> Union[HttpResponse, Any]:
         if (
             request.method in ("PUT", "PATCH")
             and request.content_type != "application/json"
@@ -22,7 +26,7 @@ def process_put_patch(get_response: Callable) -> Callable:
 
         return await get_response(request)
 
-    def sync_middleware(request: HttpRequest) -> Any:
+    def sync_middleware(request: HttpRequest) -> Union[HttpResponse, Any]:
         if (
             request.method in ("PUT", "PATCH")
             and request.content_type != "application/json"
