@@ -42,7 +42,7 @@ jobs:
               if: steps.check-django.outputs.compatible == 'true'
               run: |
                   poetry install --sync --no-interaction --no-root
-                  poetry shell pip install "django==${{ matrix.django-version }}.*"
+                  poetry run pip install "django==${{ matrix.django-version }}.*"
             - name: Run tests
               if: steps.check-django.outputs.compatible == 'true'
               run: poetry run pytest .
