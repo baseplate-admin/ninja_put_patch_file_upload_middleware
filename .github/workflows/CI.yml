@@ -67,7 +67,7 @@ jobs:
 
         environment:
             name: pypi
-            url: https://pypi.org/project/django-hstore-widget
+            url: https://pypi.org/project/ninja-put-patch-file-upload-middleware/
 
         permissions:
             contents: write
