@@ -5,6 +5,7 @@ from asgiref.sync import iscoroutinefunction, sync_to_async
 from django.http import HttpRequest, HttpResponse
 from django.utils.decorators import sync_and_async_middleware
 
+TARGET_METHODS = ("PUT", "PATCH")
 
 @sync_and_async_middleware
 def process_put_patch(
@@ -14,7 +15,7 @@ def process_put_patch(
 ) -> Union[Callable[[HttpRequest], Any], Callable[[HttpRequest], HttpResponse]]:
     async def async_middleware(request: HttpRequest) -> Union[HttpResponse, Any]:
         if (
-            request.method in ("PUT", "PATCH")
+            request.method in TARGET_METHODS
             and request.content_type != "application/json"
         ):
             initial_method = request.method
@@ -28,7 +29,7 @@ def process_put_patch(
 
     def sync_middleware(request: HttpRequest) -> Union[HttpResponse, Any]:
         if (
-            request.method in ("PUT", "PATCH")
+            request.method in TARGET_METHODS
             and request.content_type != "application/json"
         ):
             initial_method = request.method
