@@ -1,13 +1,11 @@
 [tool.poetry]
 name = "ninja-put-patch-file-upload-middleware"
-version = "0.1.3"
+version = "0.1.4"
 description = "A middleware that allows user to upload files using PUT / Patch"
 authors = ["baseplate-admin <61817579+baseplate-admin@users.noreply.github.com>"]
 license = "MIT"
 readme = "README.md"
 packages = [{include = "ninja_put_patch_file_upload_middleware"}]
-homepage = "https://github.com/baseplate-admin/ninja_put_patch_file_upload_middleware"
-repository = "https://github.com/baseplate-admin/ninja_put_patch_file_upload_middleware"
 keywords = ["ninja", "django-ninja", "middlewares",'put','patch','file upload']
 classifiers = [
     "Development Status :: 5 - Production/Stable",
@@ -20,7 +18,19 @@ classifiers = [
     "Framework :: Django :: 5.0",
     "Framework :: Django :: 5.1",
     "Operating System :: OS Independent",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
 ]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/baseplate-admin/ninja_put_patch_file_upload_middleware/issues"
+"homepage" = "https://github.com/baseplate-admin/ninja_put_patch_file_upload_middleware"
+"repository" = "https://github.com/baseplate-admin/ninja_put_patch_file_upload_middleware"
 
 [tool.poetry.dependencies]
 python = ">=3.9"
