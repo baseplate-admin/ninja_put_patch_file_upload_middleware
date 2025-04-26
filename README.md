@@ -1,7 +1,7 @@
 [![Downloads](https://static.pepy.tech/personalized-badge/ninja-put-patch-file-upload-middleware?period=month&units=international_system&left_color=black&right_color=orange&left_text=Downloads)](https://pepy.tech/project/ninja-put-patch-file-upload-middleware)
 
 > [!NOTE]  
-The functionality of this PR has been merged via [django-ninja#1423](https://github.com/vitalik/django-ninja/pull/1423)
+The functionality of this package has been merged into `django-ninja` via [django-ninja#1423](https://github.com/vitalik/django-ninja/pull/1423)
 
 
 # ninja_put_patch_file_upload_middleware
